@@ -1,0 +1,23 @@
+.results-box {
+  background: #F0F0F0;
+  border: 1px solid #AAAAAA;
+  border-radius: 10px;
+  padding: 22px 23px 19px;
+  width: fit-content;
+
+  margin-bottom: 10px;
+}
+
+.results-box div {
+  margin-bottom: 12px;
+}
+
+.results-box p, h3 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.results-box h3 {
+  font-weight: bold;
+}
