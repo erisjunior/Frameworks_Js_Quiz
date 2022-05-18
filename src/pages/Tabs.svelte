@@ -1,12 +1,15 @@
 <script lang="ts">
   import tabsData from "../data/tabs";
   import Button from "../components/Button.svelte";
+  import type { ITab } from "../types/Tab";
+
+  export let tabs: ITab[] = tabsData;
 
   let currentTab = 0;
 </script>
 
 <div class="tabs-container">
-  {#each tabsData as tab, index (index)}
+  {#each tabs as tab, index (index)}
     <Button
       focused={currentTab === index}
       on:click={() => (currentTab = index)}
@@ -15,7 +18,7 @@
     </Button>
   {/each}
   <div class="tabs-box">
-    {tabsData[currentTab].text}
+    {tabs[currentTab].text}
   </div>
 </div>
 
