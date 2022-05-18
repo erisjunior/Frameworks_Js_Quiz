@@ -1,0 +1,39 @@
+<script setup lang="ts">
+  defineProps<{
+    focused?: boolean;
+  }>();
+</script>
+
+<template>
+  <button :class="{ focused }">
+    <slot></slot>
+  </button>
+</template>
+
+<style scoped>
+  button {
+    background: #CCCCCC;
+    border: 1px solid #777777;
+    border-radius: 3px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    min-width: 112px;
+
+    padding: 5px 20px;
+
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+
+  .focused {
+    font-weight: 700;
+    background: #AAAAAA;
+  }
+</style>
