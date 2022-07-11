@@ -1,0 +1,17 @@
+.tabs-form .line {
+  border-top: 1px solid #000000;
+  margin: 20px 0;
+}
+
+.tabs-form .input-div > label {
+  margin-right: 10px;
+}
+
+.tabs-form .error {
+  color: #ff5555;
+  font-style: italic;
+}
+
+.tabs-form .tab-form {
+  margin-bottom: 20px;
+}

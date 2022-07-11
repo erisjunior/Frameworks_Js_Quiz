@@ -1,9 +1,4 @@
-export interface TabsProps {
-  tabs: Tab[];
-}
-
-export interface Tab {
-  id: number;
+export interface ITab {
   title: string;
   text: string;
 }

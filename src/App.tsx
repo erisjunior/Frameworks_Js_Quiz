@@ -1,7 +1,12 @@
+import { TabsProvider } from './context';
 import * as Pages from './pages';
 
 function App() {
-  return <Pages.Quiz />;
-}
+  return (
+    <TabsProvider>
+      <Pages.Tabs />
+    </TabsProvider>
+  );
+};
 
 export default App;

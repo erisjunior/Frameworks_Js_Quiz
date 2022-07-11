@@ -1,4 +1,4 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import Tabs from '../pages/tabs';
 
@@ -9,28 +9,7 @@ export default {
   },
 } as ComponentMeta<typeof Tabs>;
 
-const Template: ComponentStory<typeof Tabs> = (args) => <Tabs {...args} />;
+const Template: ComponentStory<typeof Tabs> = (args) => <Tabs />;
 
 export const Default = Template.bind({});
 Default.args = {};
-
-export const CustomValues = Template.bind({});
-CustomValues.args = {
-  tabs: [
-    {
-      id: 1,
-      title: 'Title Alternativo 1',
-      text: 'Text Alternativo 1'
-    },
-    {
-      id: 2,
-      title: 'Title Alternativo 2',
-      text: 'Text Alternativo 2'
-    },
-    {
-      id: 3,
-      title: 'Title Alternativo 3',
-      text: 'Text Alternativo 3'
-    },
-  ]
-};

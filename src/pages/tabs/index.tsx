@@ -1,27 +1,13 @@
-import { useState } from 'react';
-import { Button } from '../../components';
-
-import TabsData from '../../data/tabs';
+import { TabsForm, TabsList } from '../../components';
 
 import './index.css';
-import { TabsProps } from './types';
 
-function Tabs({ tabs = TabsData }: TabsProps) {
-  const [currentTab, setCurrentTab] = useState(0);
+function Tabs() {
 
   return (
-    <div className="tabs-container">
-      {tabs.map((tab, index) => (
-        <Button
-          onClick={() => setCurrentTab(index)}
-          focused={currentTab === index}
-        >
-          {tab.title}
-        </Button>
-      ))}
-      <div className="tabs-box">
-        {tabs[currentTab].text}
-      </div>
+    <div className="container">
+      <TabsForm />
+      <TabsList />
     </div>
   );
 }
